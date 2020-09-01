@@ -21,10 +21,26 @@ import ReactDom from 'react-dom'
 
 //React.Fragment
 
+// ReactDom.render(<React.Fragment>
+//     <h1>Hello World!</h1>
+//     <p>This Is Multiple JSX</p>
+//     <a href='#'> Click Here</a>
+//     <h2>Hey Bro!</h2>
+//    </React.Fragment>,
+//    document.getElementById('root'))
+
+
+
+//React first-challenge
+
 ReactDom.render(<React.Fragment>
-    <h1>Hello World!</h1>
-    <p>This Is Multiple JSX</p>
-    <a href='#'> Click Here</a>
-    <h2>Hey Bro!</h2>
-   </React.Fragment>,
-   document.getElementById('root'))
+    <h1>Netflix</h1>
+    <p>My top 5 netflix series</p>
+    <ul>
+        <li>Dark</li>
+        <li>Stranger Things</li>
+        <li>Sex Education</li>
+        <li>Money Heist</li>
+        <li>Breaking Bad</li>
+    </ul>
+</React.Fragment>, document.getElementById('root'))
