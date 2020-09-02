@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import './index.css'
 
 //reactDom.render() with single jsx
 
@@ -84,12 +85,27 @@ import ReactDom from 'react-dom'
 
 //JSX attributes 
 
-var imgLink='http://lorempixel.com/540/360'
-var imgLink2='http://lorempixel.com/640/460'
+// var imgLink='http://lorempixel.com/540/360'
+// var imgLink2='http://lorempixel.com/640/460'
+// ReactDom.render(<React.Fragment>
+//     <h1 contentEditable="true"> Hasiul Hasan</h1>
+//     <img src={imgLink} alt='random-img'/>
+//     <img src={imgLink2} alt='random-img'/>
+// </React.Fragment>,document.getElementById('root'))
+
+
+
+//CSS in react
+
+var imgLink='http://lorempixel.com/300/250'
+var imgLink2='http://lorempixel.com/300/250'
 ReactDom.render(<React.Fragment>
-    <h1 contentEditable="true"> Hasiul Hasan</h1>
+    <h1 className='heading'> Hasiul Hasan</h1>
+
+    <div className='img-div'>
     <img src={imgLink} alt='random-img'/>
     <img src={imgLink2} alt='random-img'/>
+    </div>
 </React.Fragment>,document.getElementById('root'))
 
 
