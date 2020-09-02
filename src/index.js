@@ -31,7 +31,7 @@ import ReactDom from 'react-dom'
 
 
 
-//React first-challenge
+//React challenge #1
 
 // ReactDom.render(<React.Fragment>
 //     <h1>Netflix</h1>
@@ -50,10 +50,35 @@ import ReactDom from 'react-dom'
 
 //react jsx expression
 
-var name='Hasibul Hasan shanto'
+// var name='Hasibul Hasan shanto'
+// ReactDom.render(<React.Fragment>
+//  <h1>My name is {name}</h1>
+//  <p>My lucky number is {12+3}</p>
+//  <p>Lets see a random number {Math.floor(Math.random()*10)+1}</p>
+// </React.Fragment>
+//     ,document.getElementById('root'))
+
+
+
+//ES6 template literals
+
+// var name='Shanto'
+// const age=23
+// ReactDom.render(
+//     <React.Fragment>
+//         <h1>my name is {`${name} and age is ${age}`}</h1>
+//     </React.Fragment>,document.getElementById('root'))
+
+
+
+
+//React challenge #2
+
+var date=new Date().toLocaleDateString()
+var time=new Date().toLocaleTimeString()
 ReactDom.render(<React.Fragment>
- <h1>My name is {name}</h1>
- <p>My lucky number is {12+3}</p>
- <p>Lets see a random number {Math.floor(Math.random()*10)+1}</p>
-</React.Fragment>
-    ,document.getElementById('root'))
+    <h1>Check Date and Time {date}</h1>
+    <p>Time is {time}</p>
+    
+
+</React.Fragment>,document.getElementById('root'))
