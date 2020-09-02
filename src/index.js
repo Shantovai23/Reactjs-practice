@@ -74,11 +74,22 @@ import ReactDom from 'react-dom'
 
 //React challenge #2
 
-var date=new Date().toLocaleDateString()
-var time=new Date().toLocaleTimeString()
-ReactDom.render(<React.Fragment>
-    <h1>Check Date and Time {date}</h1>
-    <p>Time is {time}</p>
-    
+// var date=new Date().toLocaleDateString()
+// var time=new Date().toLocaleTimeString()
+// ReactDom.render(<React.Fragment>
+//     <h1>Check Date and Time {date}</h1>
+//     <p>Time is {time}</p>
+// </React.Fragment>,document.getElementById('root'))
 
+
+//JSX attributes 
+
+var imgLink='http://lorempixel.com/540/360'
+var imgLink2='http://lorempixel.com/640/460'
+ReactDom.render(<React.Fragment>
+    <h1 contentEditable="true"> Hasiul Hasan</h1>
+    <img src={imgLink} alt='random-img'/>
+    <img src={imgLink2} alt='random-img'/>
 </React.Fragment>,document.getElementById('root'))
+
+
