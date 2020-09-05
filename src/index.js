@@ -111,23 +111,28 @@ import './index.css'
 
 //inline CSS in react
 
-const heading={
-    color:'#fa9191',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    textShadow: '0px 2px  4px #ffe9c5',
-    margin: '30px 0',
-    fontFamily: "'Gayathri', sans-serif"
-}
-var imgLink='http://lorempixel.com/300/250'
-var imgLink2='http://lorempixel.com/300/250'
+// const heading={
+//     color:'#fa9191',
+//     fontWeight: 'bold',
+//     textAlign: 'center',
+//     textShadow: '0px 2px  4px #ffe9c5',
+//     margin: '30px 0',
+//     fontFamily: "'Gayathri', sans-serif"
+// }
+// var imgLink='http://lorempixel.com/300/250'
+// var imgLink2='http://lorempixel.com/300/250'
+// ReactDom.render(<React.Fragment>
+//     <h1  style={heading}> Hasiul Hasan</h1>
+
+//     <div className='img-div'>
+//     <img src={imgLink} alt='random-img'/>
+//     <img src={imgLink2} alt='random-img'/>
+//     </div>
+// </React.Fragment>,document.getElementById('root'))
+
+
+// React Component
+import App from './App'
 ReactDom.render(<React.Fragment>
-    <h1  style={heading}> Hasiul Hasan</h1>
-
-    <div className='img-div'>
-    <img src={imgLink} alt='random-img'/>
-    <img src={imgLink2} alt='random-img'/>
-    </div>
+    <App/>
 </React.Fragment>,document.getElementById('root'))
-
-
