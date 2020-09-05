@@ -132,6 +132,13 @@ import './index.css'
 
 
 // React Component
+// import App from './App'
+// ReactDom.render(<React.Fragment>
+//     <App/>
+// </React.Fragment>,document.getElementById('root'))
+
+//challenge #5
+
 import App from './App'
 ReactDom.render(<React.Fragment>
     <App/>
