@@ -36,33 +36,60 @@ import React, { useState } from 'react'
 
 //event handeling
 
+// const App=()=>{
+//   const [inCr,upClr]=useState('#fa9191')
+//   const [name,upName]=useState('Click')
+
+// const bgChange=()=>{
+//  let newCr='red'
+//  let newNam='Changed'
+//  upClr(newCr)
+//  upName(newNam)
+// }
+// const clkTwice=()=>{
+
+// let twiceName='Twice Worked'
+// let twiceClr='green'
+// upName(twiceName)
+// upClr(twiceClr)
+
+// }
+
+//  return(
+//   <>
+//    <div style={{backgroundColor: inCr}}>
+//     <button onClick={bgChange} onDoubleClick={clkTwice}>{name}</button>
+//     </div>
+//   </>
+//  )
+// }
+
+
+
+//react froms
+
 const App=()=>{
-  const [inCr,upClr]=useState('#fa9191')
-  const [name,upName]=useState('Click')
+ 
+const [name,setName]=useState()
+const [storedName,upstore]=useState()
 
-const bgChange=()=>{
- let newCr='red'
- let newNam='Changed'
- upClr(newCr)
- upName(newNam)
-}
-const clkTwice=()=>{
+const inputEvent=(event)=>
+ setName(event.target.value)
 
-let twiceName='Twice Worked'
-let twiceClr='green'
-upName(twiceName)
-upClr(twiceClr)
-
-}
+ const stored=()=>{
+   upstore(name)
+   console.log(name)
+ }
 
  return(
   <>
-   <div style={{backgroundColor: inCr}}>
-    <button onClick={bgChange} onDoubleClick={clkTwice}>{name}</button>
-    </div>
+    <h1>Hello {storedName}</h1>
+    <input type='text' placeholder='Name' onChange={inputEvent} value={name}/>
+    <button onClick={stored} >Submit</button>
+    
   </>
  )
-}
+ }
 
 
 export default App;

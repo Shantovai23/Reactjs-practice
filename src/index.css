@@ -41,3 +41,18 @@ button{
   cursor: pointer;
 }
 
+h1{
+  font-size: 60px;
+  margin: 20px 0;
+  color: #fff;
+}
+
+input{
+  padding: 10px 60px;
+  margin: 20px 0;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
