@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import Heading from './Heading'
 // import Para from './Para'
 // import List from './List'
@@ -12,18 +12,57 @@ import React from 'react'
 // );
 // }
 
-import {add,sub,mul,div} from './Calculator'
-function App(){
-  return(
-    <React.Fragment>
-        <ol>
-          <li>Sum of two num is {add(14,3)} </li>
-          <li>Sub of two num is {sub(15,14)} </li>
-          <li>Mul of two num is {mul(3,5)}</li>
-          <li>Div of two num is {div(14,6)} </li>
 
-      </ol>
-    </React.Fragment>
-  )
+
+// import {add,sub,mul,div} from './Calculator'
+
+//Hooks
+// const App=()=>{
+   
+//   const [count,setCount]=useState(0)
+//   const increment_num=()=>{
+//     setCount(count+1)
+//   }
+
+//   return(
+//     <React.Fragment>
+//      <h1>{count}</h1>
+//      <button onClick={increment_num} >Click</button>
+//     </React.Fragment>
+//   )
+// }
+
+
+
+//event handeling
+
+const App=()=>{
+  const [inCr,upClr]=useState('#fa9191')
+  const [name,upName]=useState('Click')
+
+const bgChange=()=>{
+ let newCr='red'
+ let newNam='Changed'
+ upClr(newCr)
+ upName(newNam)
 }
+const clkTwice=()=>{
+
+let twiceName='Twice Worked'
+let twiceClr='green'
+upName(twiceName)
+upClr(twiceClr)
+
+}
+
+ return(
+  <>
+   <div style={{backgroundColor: inCr}}>
+    <button onClick={bgChange} onDoubleClick={clkTwice}>{name}</button>
+    </div>
+  </>
+ )
+}
+
+
 export default App;
