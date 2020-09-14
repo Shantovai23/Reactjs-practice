@@ -21,7 +21,7 @@
 body{
   background-color: #fa9191;
 }
-div{
+div form{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -55,4 +55,8 @@ input{
   border: none;
   border-radius: 3px;
 }
+input::placeholder{
+  font-size: 18px;
+}
+
 

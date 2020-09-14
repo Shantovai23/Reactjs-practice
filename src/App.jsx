@@ -70,23 +70,32 @@ import React, { useState } from 'react'
 
 const App=()=>{
  
-const [name,setName]=useState()
-const [storedName,upstore]=useState()
+const [name,setName]=useState('')
+const [lastName,upLastName]=useState('')
+const [storedName,upstore]=useState('')
+const [showLastName,showUpLastName]=useState('')
 
+const inputEventLast=(e)=>{
+  upLastName(e.target.value)
+}
 const inputEvent=(event)=>
  setName(event.target.value)
 
- const stored=()=>{
+ const stored=(event)=>{
+   event.preventDefault()
    upstore(name)
-   console.log(name)
+   showUpLastName(lastName)
  }
 
  return(
   <>
-    <h1>Hello {storedName}</h1>
-    <input type='text' placeholder='Name' onChange={inputEvent} value={name}/>
-    <button onClick={stored} >Submit</button>
-    
+    <form onSubmit={stored}>
+    <h1>Hello {storedName} {showLastName}</h1>
+    <input type='text' placeholder='First Name' onChange={inputEvent} value={name}/>
+    <input type='text' placeholder='Last Name' onChange={inputEventLast} value={lastName}/>
+    <br/>
+    <button>Submit</button>
+    </form>
   </>
  )
  }
