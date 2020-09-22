@@ -189,21 +189,37 @@ import React, { useState, useEffect } from 'react'
 
 //useEffects in reacts
 
+// const App=()=>{
+//   const [num,setnum]=useState(0)
+//   const [nums,setnums]=useState(0)
+//   useEffect(()=>{
+//     alert('clicked')
+//   },[nums])
+//    const click=()=>{
+//      setnum(num+1)
+//    }
+//    const click2=()=>{
+//     setnums(nums+1)
+//    }
+//   return(<>
+//     <button onClick={click}>Clcik {num}</button>
+//     <button onClick={click2}>Clcik {nums}</button>
+//   </>)
+// }
+// export default App;
+
 const App=()=>{
   const [num,setnum]=useState(0)
-  const [nums,setnums]=useState(0)
+
   useEffect(()=>{
-    alert('clicked')
-  },[nums])
+    document.title=`clicked ${num} times`
+  })
+
    const click=()=>{
      setnum(num+1)
    }
-   const click2=()=>{
-    setnums(nums+1)
-   }
   return(<>
     <button onClick={click}>Clcik {num}</button>
-    <button onClick={click2}>Clcik {nums}</button>
   </>)
 }
 export default App;
