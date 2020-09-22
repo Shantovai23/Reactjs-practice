@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+import React, { useState, useEffect } from 'react'
 // import Heading from './Heading'
 // import Para from './Para'
 // import List from './List'
@@ -170,18 +170,40 @@ import React, { createContext } from 'react'
 
 
   //react context API
-  import ComA from './ComA'
-  const fname=createContext()
-  const lname=createContext()
-  const App=()=>{
-    return(<>
-       <fname.Provider value={'Hasibul '}>
-       <lname.Provider value={'Hasan'}>
-       <ComA/>
-       </lname.Provider>
-       </fname.Provider>
-    </>)
-  }
+//   import ComA from './ComA'
+//   const fname=createContext()
+//   const lname=createContext()
+//   const App=()=>{
+//     return(<>
+//        <fname.Provider value={'Hasibul '}>
+//        <lname.Provider value={'Hasan'}>
+//        <ComA/>
+//        </lname.Provider>
+//        </fname.Provider>
+//     </>)
+//   }
   
+// export default App;
+// export {fname,lname}
+
+
+//useEffects in reacts
+
+const App=()=>{
+  const [num,setnum]=useState(0)
+  const [nums,setnums]=useState(0)
+  useEffect(()=>{
+    alert('clicked')
+  },[nums])
+   const click=()=>{
+     setnum(num+1)
+   }
+   const click2=()=>{
+    setnums(nums+1)
+   }
+  return(<>
+    <button onClick={click}>Clcik {num}</button>
+    <button onClick={click2}>Clcik {nums}</button>
+  </>)
+}
 export default App;
-export {fname,lname}
