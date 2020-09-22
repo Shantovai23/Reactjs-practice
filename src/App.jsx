@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createContext } from 'react'
 // import Heading from './Heading'
 // import Para from './Para'
 // import List from './List'
@@ -105,25 +105,25 @@ import React, { useState } from 'react'
 
  //react multiple input fields
 
- const App=()=>{
+//  const App=()=>{
  
-  const [fullName,setFullName]=useState({
-    fName:'',
-    lName: '',
-    email:''
-  })
+//   const [fullName,setFullName]=useState({
+//     fName:'',
+//     lName: '',
+//     email:''
+//   })
 
-  const inputEvent=(event)=>{
+//   const inputEvent=(event)=>{
    
-    const {value,name}=event.target
+//     const {value,name}=event.target
 
-    setFullName((prevalue)=>{
-      console.log(prevalue)
+//     setFullName((prevalue)=>{
+//       console.log(prevalue)
 
-      return{
-        ...prevalue,
-        [name]:value
-      }
+//       return{
+//         ...prevalue,
+//         [name]:value
+//       }
       // if(name==='fName'){
       // return{
       //   fName: value,
@@ -143,27 +143,45 @@ import React, { useState } from 'react'
       //       email: value
       //     }
       // } 
-    })
+    // })
 
-  }
+  // }
    
-   const onSubmit=(event)=>{
-     event.preventDefault()
-     alert('Submitted')
-   }
+  //  const onSubmit=(event)=>{
+  //    event.preventDefault()
+  //    alert('Submitted')
+  //  }
   
-   return(
-    <>
-      <form onSubmit={onSubmit}>
-      <h1>Hello {fullName.fName} {fullName.lName}</h1>
-      <h3>{fullName.email}</h3>
-      <input type='text' placeholder='First Name' name='fName' onChange={inputEvent} value={fullName.fName}/>
-      <input type='text' placeholder='Last Name' name='lName' onChange={inputEvent}  value={fullName.lName}/>
-      <input type='email' placeholder='Email' name='email' onChange={inputEvent}  value={fullName.email}/>
-      <br/>
-      <button>Submit</button>
-      </form>
-    </>
-   )
-   }
+  //  return(
+  //   <>
+  //     <form onSubmit={onSubmit}>
+  //     <h1>Hello {fullName.fName} {fullName.lName}</h1>
+  //     <h3>{fullName.email}</h3>
+  //     <input type='text' placeholder='First Name' name='fName' onChange={inputEvent} value={fullName.fName}/>
+  //     <input type='text' placeholder='Last Name' name='lName' onChange={inputEvent}  value={fullName.lName}/>
+  //     <input type='email' placeholder='Email' name='email' onChange={inputEvent}  value={fullName.email}/>
+  //     <br/>
+  //     <button>Submit</button>
+  //     </form>
+  //   </>
+  //  )
+  //  }
+
+
+
+  //react context API
+  import ComA from './ComA'
+  const fname=createContext()
+  const lname=createContext()
+  const App=()=>{
+    return(<>
+       <fname.Provider value={'Hasibul '}>
+       <lname.Provider value={'Hasan'}>
+       <ComA/>
+       </lname.Provider>
+       </fname.Provider>
+    </>)
+  }
+  
 export default App;
+export {fname,lname}
