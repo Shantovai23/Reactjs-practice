@@ -140,6 +140,9 @@ import './index.css'
 //challenge #5
 
 import App from './App'
-ReactDom.render(<React.Fragment>
+import { BrowserRouter } from 'react-router-dom'
+ReactDom.render(<>
+   <BrowserRouter>
     <App/>
-</React.Fragment>,document.getElementById('root'))
+    </BrowserRouter>
+</>,document.getElementById('root'))

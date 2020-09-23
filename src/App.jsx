@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 // import Heading from './Heading'
 // import Para from './Para'
 // import List from './List'
@@ -208,18 +208,37 @@ import React, { useState, useEffect } from 'react'
 // }
 // export default App;
 
+// const App=()=>{
+//   const [num,setnum]=useState(0)
+
+//   useEffect(()=>{
+//     document.title=`clicked ${num} times`
+//   })
+
+//    const click=()=>{
+//      setnum(num+1)
+//    }
+//   return(<>
+//     <button onClick={click}>Clcik {num}</button>
+//   </>)
+// }
+
+
+//React router
+
+import {Switch,Route} from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import Error from './Error'
 const App=()=>{
-  const [num,setnum]=useState(0)
-
-  useEffect(()=>{
-    document.title=`clicked ${num} times`
-  })
-
-   const click=()=>{
-     setnum(num+1)
-   }
-  return(<>
-    <button onClick={click}>Clcik {num}</button>
-  </>)
+  return(
+    <>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route path='/about' component={About}/>
+        <Route component={Error}/>
+      </Switch>
+    </>
+  )
 }
 export default App;
